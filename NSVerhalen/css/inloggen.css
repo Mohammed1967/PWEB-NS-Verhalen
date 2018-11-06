@@ -1,0 +1,506 @@
+/*--------------------------------------------------------------------------
+                                  BASIS
+---------------------------------------------------------------------------*/
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #e6e6e9;
+  color: #060920;
+  margin: 0;
+  font-weight: 200;
+}
+
+main {
+  margin-top: 5em;
+  margin: auto;
+  max-width: 95%;
+}
+
+a {
+  text-decoration: none;
+  ;
+  color: #003080;
+}
+
+h2 {
+  margin-bottom: 0.4em;
+  margin-top: 2.5em;
+  color: #003080;
+  font-size: 2em;
+  font-weight: 500;
+}
+
+h3 {
+  font-weight: lighter;
+}
+
+/*--------------------------------------------------------------------------
+                                  HEADER
+---------------------------------------------------------------------------*/
+
+body>header {
+  display: grid;
+  grid-template-columns: 12.375em auto 13.75em;
+  grid-template-rows: 4em;
+  padding: 0 3.5%;
+  background-color: #FFFFFF;
+  position: fixed;
+  top: 0;
+  color: #003080;
+  box-shadow: 0 .125rem 0 0 rgba(7, 7, 33, .15);
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 3;
+}
+
+body>header>a>h1 {
+  margin-left: 0.5em;
+  font-size: 1.2em;
+  font-weight: 300;
+  display: inline-grid;
+  margin-bottom: 0.9em;
+}
+
+body>header>p {
+  border-radius: 1em;
+  padding: 0.15em 0.55em;
+  background-color: #FFFFFF;
+  border: 0.05em solid lightgrey;
+  position: absolute;
+  right: 21em;
+  font-size: 0.7em;
+  margin-right: 2.5%;
+}
+
+body>header>a {
+  padding: 0em 0 1em 0;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+body>header>a>img {
+  /*  margin: 0em 0em em 0em;*/
+  padding-top: 1.5em;
+  display: inline-grid;
+}
+
+body>header>nav {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+  /* justify-self: end; */
+}
+
+body>header>nav>ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+body>header>nav>ul>li {
+  margin: 1.4em 0 0 1em;
+  grid-column: span 1;
+  display: flex;
+  align-items: center;
+}
+
+body>header>nav>ul>li>a {
+  display: inline-grid;
+  position: relative;
+  padding-bottom: 0.625em;
+}
+
+body>header>nav:nth-of-type(1)>ul>li:nth-of-type(1)>a::before {
+  content: url("../img/lijst.svg");
+  position: absolute;
+  top: -0.5em;
+  left: -2em;
+}
+
+body>header>nav:nth-of-type(1)>ul>li:nth-of-type(2)>a::before {
+  content: url("../img/account.svg");
+  position: absolute;
+  top: -0.5em;
+  left: -2em;
+}
+
+body>header>nav:nth-of-type(1)>ul>li:nth-of-type(2)>a {
+  margin-left: 1em;
+}
+
+body>header>nav:nth-of-type(2) {
+  display: none;
+}
+
+@media (max-width: 32em) {
+  body>header {
+    grid-template-columns: 16em auto 5.5em;
+  }
+  body>header>nav:nth-of-type(1) {
+    display: none;
+  }
+  body>header>nav:nth-of-type(2) {
+    display: block;
+  }
+  
+  h1 {
+    visibility: hidden;
+    display: block;
+  }
+
+  body>header>nav>ul>li {
+    margin-top: 1em;
+    margin-left: 0.5em;
+  }
+  body>header>p {
+    right: 5.5em;
+  }
+
+}
+
+@media (min-width: 71.875em) {
+  main {
+    width: 68em;
+  }
+  main>section>div {
+    height: 20.325em;
+    overflow-x: inherit;
+    max-width: 68em;
+  }
+}
+
+
+/*--------------------------------------------------------------------------
+                                  FORM
+---------------------------------------------------------------------------*/
+
+.test {
+  margin-top: -5.5em;
+  margin-right: 1em;
+  justify-self: end;
+}
+
+
+main>form>div>fieldset>label {
+  color: #003082;
+  font-weight: 700;
+  text-transform: lowercase;
+  display: inline-block;
+  width: 94%;
+  background-color: white;
+  padding: 0.7em 0.7em 0.7em 1em;
+  margin-top: 0.8em;
+  font-size: 1em;
+  border: none;
+}
+
+main>form>div>fieldset>label>input {
+  font-size: 1em;
+  border: none;
+  width: 55%;
+  margin-top: 0.05em;
+}
+
+form {
+  margin-top: 5em;
+  padding-bottom: 4.75em;
+  background-color: #FFC917;
+  box-shadow: 0 .125rem 0 0 rgba(7, 7, 33, .15);
+  padding-top: 1em;
+}
+
+main>form>fieldset>input[type=radio] {
+  position: absolute;
+  visibility: hidden;
+  display: none;
+}
+
+[name="inloggenform"] + label {
+  color: rgba(7, 7, 33, .6);
+  font-size: 1.9rem;
+  font-weight: 200;
+  cursor: pointer;
+}
+
+[name="inloggenform"]:nth-of-type(1) + label {
+  padding-right: 0.1em;
+  padding-left: 0.1em;
+}
+
+[name="inloggenform"]:checked + label {
+  color: #003082;
+}
+
+main>section {
+  background-color: white;
+  padding: 1em;
+  box-shadow: 0 .125rem 0 0 rgba(7, 7, 33, .15);
+  display: grid;
+  grid-template-rows: 3em 10em 5em;
+  height: 18.5em;
+}
+
+main>section>h2 {
+  margin-top: 0.2em;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+main>section>ul {
+  list-style-image: url("../img/check.svg");
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+main>section>a[href="aanmeldenform.html"] {
+  padding: 0.8em 2.5em 0.9em 1.3em;
+  font-size: 1em;
+  color: #FFFFFF;
+  background-color: #0079D3;
+  border: none;
+  margin-top: 2em;
+  justify-self: end;
+}
+
+main>section>a:hover {
+  box-shadow: inset 0 -3.125rem 0 #005ca0;
+  cursor: pointer;
+  color: #FFFFFF;
+}
+
+main>section>a::after {
+  content: url("../img/leesverderwit.svg");
+  transform: rotate(270deg);
+  width: 2.5em;
+  height: 2.5em;
+  display: inline-block;
+  position: absolute;
+  margin-left: -0.2em;
+  margin-top: -0.5em;
+}
+
+main>form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 3.5em 3em;
+  height: 14.7em;
+}
+
+main>form>fieldset {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+main>form>div {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1.5em 1fr;
+  grid-template-rows: auto;
+}
+
+main>form {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+main>section {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+}
+
+main>form>div:nth-of-type(1) {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+}
+
+
+button[name=login] {
+  position: relative;
+  justify-self: end;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  margin-top: 3em;
+  margin-right: 1em;
+  font-weight: 200;
+}
+
+main>form>div>fieldset>label {
+  display: flex;
+}
+
+main>form>div>fieldset>label>input {
+  margin-left: 1em;
+  text-overflow: ellipsis;
+  width: 10em;
+}
+
+main>form>div>fieldset>label>input:focus {
+  background: rgba(0,0,0,.1);
+}
+
+main>form>div>fieldset>label>input:invalid {
+  background: rgba(255,0,0,.1);
+}
+
+[name="login"] {
+  margin: 1em 1.7em 1em 0.75em;
+  padding: 0.8em 2.5em 0.9em 1.3em;
+  font-size: 1em;
+  color: #FFFFFF;
+  background-color: #0079D3;
+  border: none;
+  right: 0;
+  position: absolute;
+}
+
+[name="login"]:hover {
+  box-shadow: inset 0 -3.125rem 0 #005ca0;
+  cursor: pointer;
+}
+
+[name="login"]::after {
+  content: url("../img/leesverderwit.svg");
+  width: 2.5em;
+  height: 2.5em;
+  transform: rotate(270deg);
+  display: inline-block;
+  position: absolute;
+  margin-left: -0.2em;
+  margin-top: -0.6em;
+}
+
+fieldset:nth-child(1n+2) {
+  margin-top: 0.5em;
+}
+
+fieldset {
+  border: 0;
+  max-width: 100%;
+}
+
+legend {
+  font-size: 2.3em;
+  font-weight: 300;
+  color: #003082;
+}
+
+section {
+  margin-top: 5em;
+}
+
+@media (min-width: 71.875em) {
+  main {
+    grid-template-columns: 1fr 33.25em 1.5em 33.25em 1fr;
+  }
+
+  main>form {
+    grid-column: 2 / 3;
+  }
+
+  main>section {
+    grid-column: 4 / 5;
+  }
+  section {
+    margin-top: 5em;
+  }
+}
+
+@media (max-width: 64em) {
+  main {
+    grid-template-columns: 29em 1.5em 1fr;
+  }
+
+  section {
+    margin-top: 5em;
+  }
+}
+
+@media (max-width: 61.313em) {
+  main>section {
+    height: 19.5em;
+    grid-template-rows: 3em 11.3em 5em;
+  }
+}
+
+@media (max-width: 57.063em) {
+  main>section {
+    height: 20.5em;
+    grid-template-rows: 3em 12.4em 5em;
+  }
+
+  section {
+    margin-bottom: 5em;
+  }
+}
+
+@media (max-width: 53em) {
+  main {
+    grid-template-columns: 1fr 29em 1fr;
+    grid-template-rows: auto 1.5em auto;
+  }
+
+  main>form {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+
+  main>section {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    height: 18.5em;
+    grid-template-rows: 3em 10.4em 5em;
+  }
+
+  main>form {
+    grid-template-columns: 29em;
+  }
+
+  section {
+    margin-top: 1em;
+  }
+
+}
+
+@media (max-width: 30.625em) {
+  main {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1.5em auto;
+  }
+
+  main>form {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  main>section {
+    grid-column: 1 / 1;
+    grid-row: 3 / 4;
+  }
+
+  main>form {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    margin-top: 1em;
+  }
+
+
+}
+
+@media (max-width: 29.563em) {
+  main>section {
+    height: 19.5em;
+    grid-template-rows: 3em 11.4em 5em;
+  }
+
+  section {
+    margin-top: 1em;
+  }
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>NS Verhalen Inloggen</title>
+  <link rel="stylesheet" href="css/inloggen.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <a href="index.html"><img src="img/logons.svg" alt="">
+      <h1>NS Verhalen</h1>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="inloggenform.html">Leeslijst</a></li>
+        <li><a href="inloggenform.html">Inloggen</a></li>
+      </ul>
+    </nav>
+    <nav>
+      <ul>
+        <li><a href="inloggenform.html"><img src="img/lijst.svg" alt=""></a></li>
+        <li><a href="inloggenform.html"><img src="img/account.svg" alt=""></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <form action="index2.html" method="get">
+      <fieldset>
+        <input type="radio" id="inloggen" name="inloggenform" checked><label for="inloggen">Inloggen</label>
+      </fieldset>
+      <div>
+        <fieldset>
+          <label for="email_inlog">Emailadres<input id="email_inlog" type="email" required placeholder="emailadres"></label>
+          <label for="wachtwoord_inlog">Wachtwoord<input id="wachtwoord_inlog" type="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+              placeholder="wachtwoord"></label>
+        </fieldset>
+        <a class="test" href="#">wachtwoord vergeten</a>
+        <button type="submit" name="login">Log in</button>
+      </div>
+    </form>
+
+    <section>
+      <h2>Account voordelen</h2>
+      <ul>
+        <li>Gepersonaliseerde suggesties</li>
+        <li>Sla je favoriete verhalen op</li>
+        <li>Online en offline lezen</li>
+        <li>Schrijf reviews over je favoriete verhaal</li>
+      </ul>
+      <a href="aanmeldenform.html">Aanmelden</a>
+    </section>
+
+  </main>
+</body>
+
+</html>

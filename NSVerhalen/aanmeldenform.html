@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>NS Verhalen Aanmelden</title>
+  <link rel="stylesheet" href="css/aanmelden.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <a href="index.html"><img src="img/logons.svg" alt=""><h1>NS Verhalen</h1></a>
+    <nav>
+      <ul>
+        <li><a href="inloggenform.html">Leeslijst</a></li>
+        <li><a href="inloggenform.html">Inloggen</a></li>
+      </ul>
+    </nav>
+    <nav>
+      <ul>
+        <li><a href="inloggenform.html"><img src="img/lijst.svg" alt=""></a></li>
+        <li><a href="inloggenform.html"><img src="img/account.svg" alt=""></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <form action="index2.html" method="get">
+      <fieldset>
+        <input type="radio" id="aanmelden" name="aanmeldenform" checked><label for="aanmelden">Aanmelden</label>
+      </fieldset>
+      <div>
+        <fieldset>
+          <label for="email_aanmelden">Emailadres<input id="email_aanmelden" type="email" required placeholder="emailadres"></label>
+          <label for="email_aanmelden">Emailadres<input id="email_aanmelden2" type="email" required placeholder="bevestig emailadres"></label>
+          <label for="wachtwoord_aanmelden">Wachtwoord<input id="wachtwoord_aanmelden" type="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="wachtwoord"></label>
+          <label for="wachtwoord_aanmelden">Wachtwoord<input id="wachtwoord_aanmelden2" type="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="bevestig wachtwoord"></label>
+        </fieldset>
+        <button type="submit" name="aanmelden">Aanmelden</button>
+      </div>
+    </form>
+
+    <section>
+      <h2>Account voordelen</h2>
+      <ul>
+        <li>Gepersonaliseerde suggesties</li>
+        <li>Sla je favoriete verhalen op</li>
+        <li>Online en offline lezen</li>
+        <li>Schrijf reviews over je favoriete verhaal</li>
+      </ul>
+    </section>
+
+  </main>
+</body>
+</html>
